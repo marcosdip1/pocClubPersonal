@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {RestProvider} from '../../providers/rest/rest';
 
 /**
  * Generated class for the TabCatalogoPage page.
@@ -15,11 +16,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TabCatalogoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  countries:string[];
+  errorMessage:string;
+  benefits:string[];
+
+
+  constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TabCatalogoPage');
+    this.getCatalogTest();
+  }
+
+  getCountries() {
+    this.rest.getCountries()
+      .subscribe(
+        countries => this.countries = countries,
+        error => this.errorMessage = <any>error);
+  }
+
+  getCatalogTest() {
+    this.rest.getCatalogTest()
+      .subscribe(
+        benefits => this.benefits = benefits,
+        error => this.errorMessage = <any>error);
+  }
+
+  openGeolocation(){
+    this.navCtrl.push('GeolocationPage');
   }
 
 }

@@ -1,0 +1,48 @@
+page-tab-catalogo .card-content-md,
+page-tab-catalogo .card-content-ios {
+  padding-top: 8px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px; }
+page-tab-catalogo .card-md,
+page-tab-catalogo .card-ios {
+  margin: 2px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3); }
+page-tab-catalogo .card-footer {
+  margin-top: auto; }
+page-tab-catalogo .card-category {
+  color: #00808c;
+  font-size: 1.2rem !important;
+  font-weight: bold; }
+page-tab-catalogo .card-description {
+  color: #747070;
+  font-size: 1.2rem !important; }
+@media screen and (max-width: 400px) {
+  page-tab-catalogo .card-image {
+    min-height: 95px !important;
+    max-height: 95px !important; } }
+page-tab-catalogo .column-button,
+page-tab-catalogo .button-item {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important; }
+page-tab-catalogo .button-item {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+  font-weight: 100;
+  border-radius: 3px; }
+page-tab-catalogo .button-inner {
+  padding-left: 10px;
+  justify-content: flex-start; }
+page-tab-catalogo .label {
+  margin-right: 0px !important; }
+page-tab-catalogo .item-inner {
+  margin-left: 0px !important;
+  padding-right: 1px !important; }
+
+/*# sourceMappingURL=tab-catalogo.css.map */

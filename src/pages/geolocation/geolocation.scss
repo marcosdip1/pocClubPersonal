@@ -1,4 +1,4 @@
-page-tab-catalogo {
+page-geolocation {
   .card-content-md,
   .card-content-ios {
     padding-top: 8px;
@@ -32,29 +32,5 @@ page-tab-catalogo {
       min-height: 95px !important;
       max-height: 95px !important;
     }
-  }
-  .column-button,
-  .button-item {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-  }
-  .button-item {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    margin-top: 2px !important;
-    margin-bottom: 2px !important;
-    font-weight: 100;
-    border-radius: 3px;
-  }
-  .button-inner {
-    padding-left: 10px;
-    justify-content:flex-start;
-  }
-  .label{
-    margin-right: 0px !important;
-  }
-  .item-inner{
-    margin-left: 0px !important;
-    padding-right: 1px !important;
   }
 }

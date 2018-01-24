@@ -16,6 +16,7 @@ import {HttpClient} from "@angular/common/http";
 export class RestProvider {
 
   private apiUrl = 'https://restcountries.eu/rest/v2/all';
+  private clubCatalogTest = 'http://clubtest.personal.com.ar:8090/club/services/catalog/items?$catalogItemType=2&$heading=3&page=0&isForm=true';
   private homeCards = [
     {
       id:1,
@@ -48,6 +49,12 @@ export class RestProvider {
 
   getCountries(): Observable<string[]> {
     return this.http.get(this.apiUrl)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+  getCatalogTest(): Observable<string[]> {
+    return this.http.get(this.clubCatalogTest)
       .map(this.extractData)
       .catch(this.handleError);
   }

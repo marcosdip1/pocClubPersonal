@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,+BACA;EACE,gBAAgB,EAAE,OAAO;AAE3B,8BAAiB;EACf,UAAU,EAAC,4CAA4C",
+"sources": ["tab-home.scss"],
+"names": [],
+"file": "tab-home.css"
+}

@@ -9,6 +9,64 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  Catalogo Content
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="column-button" style="padding-right: 2px">
+        <button ion-button icon-left full color="dark" class="button-item">
+          <ion-icon name="ice-cream"></ion-icon>
+          Gastronomía
+        </button>
+      </ion-col>
+      <ion-col class="column-button" style="padding-left: 2px">
+        <button ion-button icon-left full color="club-blue" class="button-item">
+          <ion-icon name="headset"></ion-icon>
+          Electrónica
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="column-button" style="padding-right: 2px">
+        <button ion-button icon-left full color="club-violet" class="button-item">
+          <ion-icon name="film"></ion-icon>
+          Cine
+        </button>
+      </ion-col>
+      <ion-col class="column-button" style="padding-left: 2px">
+        <button ion-button icon-left full color="club-gold" class="button-item">
+          <ion-icon name="cart"></ion-icon>
+          Compras
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="column-button">
+        <button ion-button icon-left full color="primary" class="button-item" (click)="openGeolocation()">
+          <ion-icon name="navigate"></ion-icon>
+          Cercanos
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 *ngFor="let b of benefits">
+        <ion-card>
+          <img class="card-image" [src]="b.image"/>
+          <ion-card-content>
+            <h3 class="card-title" [innerHTML]="b.name">
+            </h3>
+            <p class="card-description" [innerHTML]="b.heading">
+            </p>
+          </ion-card-content>
+          <ion-row no-padding class="card-footer">
+            <ion-col>
+              <p class="card-category">Personal Classic</p>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

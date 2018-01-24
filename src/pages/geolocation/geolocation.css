@@ -1,0 +1,29 @@
+page-geolocation .card-content-md,
+page-geolocation .card-content-ios {
+  padding-top: 8px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px; }
+page-geolocation .card-md,
+page-geolocation .card-ios {
+  margin: 2px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3); }
+page-geolocation .card-footer {
+  margin-top: auto; }
+page-geolocation .card-category {
+  color: #00808c;
+  font-size: 1.2rem !important;
+  font-weight: bold; }
+page-geolocation .card-description {
+  color: #747070;
+  font-size: 1.2rem !important; }
+@media screen and (max-width: 400px) {
+  page-geolocation .card-image {
+    min-height: 95px !important;
+    max-height: 95px !important; } }
+
+/*# sourceMappingURL=geolocation.css.map */
