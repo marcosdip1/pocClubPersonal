@@ -11,11 +11,37 @@ import {HttpClient} from "@angular/common/http";
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
+
 @Injectable()
 export class RestProvider {
 
   private apiUrl = 'https://restcountries.eu/rest/v2/all';
-
+  private homeCards = [
+    {
+      id:1,
+      name:'fest',
+      title:'UN FEST PARA LA STORY',
+      description:'Este año, tu entrada al Personal Fest es una pulsera. Activala para ingresar al predio, comprar en los puestos de gastronomía y disfrutar de toda la diversión.',
+      imgUrl:'assets/imgs/fest.jpg',
+      url:'http://www.personalfest.com.ar'
+    },
+    {
+      id:2,
+      name:'netshoes',
+      title:'Netshoes',
+      description:'Disfruta de un 20% de descuento en Netshoes, ingresando el código de descuento en www.personal.bondacom.com/clientes/netshoes.',
+      imgUrl:'assets/imgs/netshoes.png',
+      url:''
+    },
+    {
+      id:3,
+      name:'freddo',
+      title:'Freddo',
+      description:'Sabemos que tenés un paladar muy exigente y te gusta disfrutar los mejores helados, por eso si sos socio Club Personal aprovechá este 2x1 en cucuruchos de Freddo!',
+      imgUrl:'assets/imgs/freddo.png',
+      url:''
+    }
+  ];
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
   }
@@ -43,4 +69,7 @@ export class RestProvider {
     return Observable.throw(errMsg);
   }
 
+  public getHomeCards() {
+    return this.homeCards;
+  }
 }

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar class="tab-nav-home">
     <ion-buttons start>
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -8,7 +8,49 @@
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  Home Content
+  <ion-card *ngFor="let card of homeCards">
+    <div *ngIf="card.name == 'fest'" (click)="openLink(card.url)">
+      <!-- Card Fest -->
+      <ion-row>
+        <ion-col col-12 col-sm>
+          <img [src]="card.imgUrl"/>
+          <ion-card-header>
+            <b><span [innerHtml]="card.title"></span></b>
+          </ion-card-header>
+          <ion-card-content>
+            <span [innerHtml]="card.description"></span>
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- Card Netshoes -->
+    <div *ngIf="card.name == 'netshoes'" class="card-background">
+      <ion-row>
+        <ion-col col-6 col-sm>
+          <ion-card-title>
+            <span [innerHtml]="card.title"></span>
+          </ion-card-title>
+          <b><span [innerHtml]="card.description"></span></b>
+        </ion-col>
+        <ion-col col-6 col-sm>
+          <img [src]="card.imgUrl"/>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- Card Freddo -->
+    <div *ngIf="card.name == 'freddo'">
+      <ion-row>
+        <ion-col col-6 col-sm>
+          <ion-card-title>
+            <span [innerHtml]="card.title"></span>
+          </ion-card-title>
+            <span [innerHtml]="card.description"></span>
+        </ion-col>
+        <ion-col col-6 col-sm>
+          <img [src]="card.imgUrl"/>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card>
 </ion-content>
