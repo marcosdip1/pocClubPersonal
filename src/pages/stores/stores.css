@@ -1,23 +1,17 @@
 /*
 Error: File to import not found or unreadable: ionic.globals.
         on line 15 of ../../theme/variables.scss
-        from line 1 of geolocation.scss
+        from line 1 of stores.scss
 
-10:   .card-md,
-11:   .card-ios {
-12:     margin: 2px;
-13:     width: 100%;
-14:     height: 100%;
-15:     display: flex;
-16:     flex-direction: column;
-17:     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
-18:   }
-19:   .card-footer {
-20:     margin-top: auto;
+10:     &.show-map {
+11:       opacity: 1;
+12:     }
+13:   }
+14: }
 
 Backtrace:
 ../../theme/variables.scss:15
-geolocation.scss:1
+stores.scss:1
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -73,4 +67,4 @@ C:/java/Ruby193/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ionic.globals.\A         on line 15 of ../../theme/variables.scss\A         from line 1 of geolocation.scss\A \A 10:   .card-md,\A 11:   .card-ios {\A 12:     margin: 2px;\A 13:     width: 100%;\A 14:     height: 100%;\A 15:     display: flex;\A 16:     flex-direction: column;\A 17:     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);\A 18:   }\A 19:   .card-footer {\A 20:     margin-top: auto;"; }
+  content: "Error: File to import not found or unreadable: ionic.globals.\A         on line 15 of ../../theme/variables.scss\A         from line 1 of stores.scss\A \A 10:     &.show-map {\A 11:       opacity: 1;\A 12:     }\A 13:   }\A 14: }"; }

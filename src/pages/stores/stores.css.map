@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,gBAAK;EACH,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,qBAAqB;EACjC,OAAO,EAAE,KAAK;EACd,yBAAW;IACT,OAAO,EAAE,CAAC",
+"sources": ["stores.scss"],
+"names": [],
+"file": "stores.css"
+}

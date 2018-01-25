@@ -1,41 +1,26 @@
 /*
 Error: File to import not found or unreadable: ionic.globals.
-        on line 15 of ../../theme/variables.scss
-        from line 1 of geolocation.scss
+        on line 15 of variables.scss
 
-10:   .card-md,
-11:   .card-ios {
-12:     margin: 2px;
-13:     width: 100%;
-14:     height: 100%;
-15:     display: flex;
-16:     flex-direction: column;
-17:     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
-18:   }
-19:   .card-footer {
-20:     margin-top: auto;
+10: // rtl styles in your app. For more info, please see:
+11: // http://ionicframework.com/docs/theming/rtl-support/
+12: $app-direction: ltr;
+13: 
+14: 
+15: @import "ionic.globals";
+16: 
+17: 
+18: // Shared Variables
+19: // --------------------------------------------------
+20: // To customize the look and feel of this app, you can override
 
 Backtrace:
-../../theme/variables.scss:15
-geolocation.scss:1
+variables.scss:15
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:37:in `css_import?'
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `map'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:88:in `block in with_import'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:88:in `with_import'
-C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
@@ -73,4 +58,4 @@ C:/java/Ruby193/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ionic.globals.\A         on line 15 of ../../theme/variables.scss\A         from line 1 of geolocation.scss\A \A 10:   .card-md,\A 11:   .card-ios {\A 12:     margin: 2px;\A 13:     width: 100%;\A 14:     height: 100%;\A 15:     display: flex;\A 16:     flex-direction: column;\A 17:     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);\A 18:   }\A 19:   .card-footer {\A 20:     margin-top: auto;"; }
+  content: "Error: File to import not found or unreadable: ionic.globals.\A         on line 15 of variables.scss\A \A 10: // rtl styles in your app. For more info, please see:\A 11: // http://ionicframework.com/docs/theming/rtl-support/\A 12: $app-direction: ltr;\A 13: \A 14: \A 15: @import \"ionic.globals\";\A 16: \A 17: \A 18: // Shared Variables\A 19: // --------------------------------------------------\A 20: // To customize the look and feel of this app, you can override"; }

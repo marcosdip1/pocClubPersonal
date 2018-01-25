@@ -1,48 +1,76 @@
-page-tab-catalogo .card-content-md,
-page-tab-catalogo .card-content-ios {
-  padding-top: 8px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px; }
-page-tab-catalogo .card-md,
-page-tab-catalogo .card-ios {
-  margin: 2px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3); }
-page-tab-catalogo .card-footer {
-  margin-top: auto; }
-page-tab-catalogo .card-category {
-  color: #00808c;
-  font-size: 1.2rem !important;
-  font-weight: bold; }
-page-tab-catalogo .card-description {
-  color: #747070;
-  font-size: 1.2rem !important; }
-@media screen and (max-width: 400px) {
-  page-tab-catalogo .card-image {
-    min-height: 95px !important;
-    max-height: 95px !important; } }
-page-tab-catalogo .column-button,
-page-tab-catalogo .button-item {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important; }
-page-tab-catalogo .button-item {
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-  margin-top: 2px !important;
-  margin-bottom: 2px !important;
-  font-weight: 100;
-  border-radius: 3px; }
-page-tab-catalogo .button-inner {
-  padding-left: 10px;
-  justify-content: flex-start; }
-page-tab-catalogo .label {
-  margin-right: 0px !important; }
-page-tab-catalogo .item-inner {
-  margin-left: 0px !important;
-  padding-right: 1px !important; }
+/*
+Error: File to import not found or unreadable: ionic.globals.
+        on line 15 of ../../theme/variables.scss
+        from line 1 of tab-catalogo.scss
 
-/*# sourceMappingURL=tab-catalogo.css.map */
+10:   .card-md,
+11:   .card-ios {
+12:     margin: 2px;
+13:     width: 100%;
+14:     height: 100%;
+15:     display: flex;
+16:     flex-direction: column;
+17:     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+18:   }
+19:   .card-footer {
+20:     margin-top: auto;
+
+Backtrace:
+../../theme/variables.scss:15
+tab-catalogo.scss:1
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `map'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:88:in `block in with_import'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:88:in `with_import'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+C:/java/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.23/bin/scss:13:in `<top (required)>'
+C:/java/Ruby193/bin/scss:23:in `load'
+C:/java/Ruby193/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ionic.globals.\A         on line 15 of ../../theme/variables.scss\A         from line 1 of tab-catalogo.scss\A \A 10:   .card-md,\A 11:   .card-ios {\A 12:     margin: 2px;\A 13:     width: 100%;\A 14:     height: 100%;\A 15:     display: flex;\A 16:     flex-direction: column;\A 17:     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);\A 18:   }\A 19:   .card-footer {\A 20:     margin-top: auto;"; }

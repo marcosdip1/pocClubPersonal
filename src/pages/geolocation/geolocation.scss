@@ -1,3 +1,4 @@
+@import '../../theme/variables.scss';
 page-geolocation {
   .card-content-md,
   .card-content-ios {
@@ -18,19 +19,34 @@ page-geolocation {
   .card-footer {
     margin-top: auto;
   }
-  .card-category {
-    color: #00808c;
-    font-size: 1.2rem !important;
-    font-weight: bold;
+  .card-distance {
+    color: map-get($colors, primary);
+    font-size: 1.3rem !important;
+    font-weight: 300;
+    text-align: right;
   }
   .card-description {
-    color: #747070;
+    color: map-get($colors, light);
     font-size: 1.2rem !important;
   }
   .card-image {
     @media screen and (max-width: 400px) {
       min-height: 95px !important;
       max-height: 95px !important;
+    }
+  }
+  .page-title{
+    text-align: center;
+    color: map-get($colors, dark);
+  }
+  #map {
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+    display: block;
+    &.show-map {
+      opacity: 1;
     }
   }
 }

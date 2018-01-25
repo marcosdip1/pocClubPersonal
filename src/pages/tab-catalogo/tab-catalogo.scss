@@ -1,3 +1,4 @@
+@import '../../theme/variables.scss';
 page-tab-catalogo {
   .card-content-md,
   .card-content-ios {
@@ -19,12 +20,12 @@ page-tab-catalogo {
     margin-top: auto;
   }
   .card-category {
-    color: #00808c;
+    color: map-get($colors, dark);
     font-size: 1.2rem !important;
     font-weight: bold;
   }
   .card-description {
-    color: #747070;
+    color: map-get($colors, light);
     font-size: 1.2rem !important;
   }
   .card-image {

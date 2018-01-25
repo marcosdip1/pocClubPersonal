@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {RestProvider} from '../../providers/rest/rest';
+import {StoresPage} from "../stores/stores";
+import {GeolocationPage} from "../geolocation/geolocation";
 
 /**
  * Generated class for the TabCatalogoPage page.
@@ -9,7 +11,7 @@ import {RestProvider} from '../../providers/rest/rest';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-tab-catalogo',
   templateUrl: 'tab-catalogo.html',
@@ -43,7 +45,11 @@ export class TabCatalogoPage {
   }
 
   openGeolocation(){
-    this.navCtrl.push('GeolocationPage');
+    this.navCtrl.push(GeolocationPage);
+  }
+
+  openStores(){
+    this.navCtrl.push(StoresPage);
   }
 
 }
