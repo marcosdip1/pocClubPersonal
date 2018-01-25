@@ -1,3 +1,32 @@
 page-login {
+  .vertical-align-content > *
+  {
+    display: flex!important;
+    align-content: center!important;
+    align-items: center!important;
+    background-color: #00b5c7;
+  }
+  .row-height
+  {
+    height:200px;
+  }
 
+  .custom-img{
+    position: relative;
+    width: 20%;
+    /*max-height: 85px;*/
+    height: 100%;
+  }
+
+  .item-font {
+    font-size: 1.0em;
+    background: #00b5c7;
+    font-weight: 600;
+  }
+
+  .item-fontred {
+    font-size: 1.0em;
+    color: #ffffff;
+    font-weight: 300;
+  }
 }

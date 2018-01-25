@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GlobalProvider } from "../../providers/global/global";
+import {LoginPage} from "../login/login";
+import { App  } from 'ionic-angular';
 
 /**
  * Generated class for the TabMiperfilPage page.
@@ -14,12 +17,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'tab-miperfil.html',
 })
 export class TabMiperfilPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private level: string;
+  constructor(public navCtrl: NavController, public navParams: NavParams,private globals: GlobalProvider,public app: App ) {
+    this.level = globals.level;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabMiperfilPage');
   }
 
+  doCerrarSession() {
+    this.globals.level = "";
+    this.globals.levelId = "";
+    this.app.getRootNav().setRoot( LoginPage );
+   }
 }

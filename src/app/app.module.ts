@@ -18,6 +18,7 @@ import {GoogleMaps} from '@ionic-native/google-maps';
 import {Geolocation} from '@ionic-native/geolocation';
 import {StoresPage} from "../pages/stores/stores";
 import {GeolocationPage} from "../pages/geolocation/geolocation";
+import { GlobalProvider } from '../providers/global/global';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import {GeolocationPage} from "../pages/geolocation/geolocation";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestProvider,
     GoogleMaps,
-    Geolocation
+    Geolocation,
+    GlobalProvider
   ]
 })
 export class AppModule {

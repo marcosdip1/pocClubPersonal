@@ -1,9 +1,45 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <button ion-button full (click)="doLogin()">Login</button>
+<ion-content padding class="vertical-align-content">
+  <ion-grid >
+    <ion-row align-items-start>
+      <ion-col center text-center>
+        <!--<ion-img class="custom-img" width="20" height="80" src="assets/imgs/globo_blanco.png"></ion-img>-->
+        <img class="custom-img" src="assets/imgs/globo_blanco.png"/>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <!--<ion-img class="custom-img" width="20" height="80" src="assets/imgs/globo_blanco.png"></ion-img>-->
+        <br><br><br>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <button ion-button  small outline color="white"  (click)="doFacebook()" style="width: 200px" >
+          <ion-icon ios="logo-facebook" md="logo-facebook" style='margin-right:5px'></ion-icon>
+          Ingresar con Facebook</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <button small ion-button outline color="white" (click)="doTwitter()" style="width: 200px">
+          <ion-icon ios="logo-twitter" md="logo-twitter" style='margin-right:15px'></ion-icon>
+            Ingresar con Twitter
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <!--<ion-img class="custom-img" width="20" height="80" src="assets/imgs/globo_blanco.png"></ion-img>-->
+        <br><br>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center >
+        <button class="item-font" ion-button  clear (click)="doAnonimo()">
+          <label class="item-fontred">Continuar sin loguearme</label>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

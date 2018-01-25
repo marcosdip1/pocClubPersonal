@@ -1,14 +1,50 @@
 <ion-header>
-  <ion-navbar>
-    <ion-buttons start>
-      <button ion-button menuToggle>
+  <ion-navbar color="primary">
+      <button *ngIf="level != ''" ion-button menuToggle left>
         <ion-icon name="menu"></ion-icon>
       </button>
-    </ion-buttons>
-    <ion-title>Mi Perfil</ion-title>
+      <ion-title>Mi Perfil</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  Mi Perfil Content
+<ion-content>
+     <ion-row >
+      <ion-col>
+        <ion-item no-lines>
+          <img class="circle-pic" src="https://scontent-eze1-1.xx.fbcdn.net/v/t1.0-1/p160x160/23243998_1667968626581712_8274985121083694480_n.jpg?oh=f2cd496c736252d9b533e69d806a3309&oe=5AF770D2">
+          <div class="header-title" text-left>
+            <p>Marcos Dip</p>
+            <hr>
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  <ion-card>
+    <ion-row >
+      <ion-col center text-center>
+        <span class="card-title">Nivel</span>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col center text-center>
+        <span class="card-subtitle">{{level}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <br>
+  <ion-list no-lines>
+    <button ion-item class="item-font">
+       Historial de canjes
+    </button>
+    <button class="item-font" ion-item menuClose (click)="openPage(p)">
+      Configuración de notificaciones
+    </button>
+  </ion-list>
 </ion-content>
+<ion-footer no-shadow >
+  <button class="item-font-footer" ion-item detail-none menuClose (click)="doCerrarSession()">
+    <label class="item-fontred">Cerrar sesión</label>
+  </button>
+</ion-footer>
+
+

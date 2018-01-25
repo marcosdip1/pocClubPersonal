@@ -1,19 +1,40 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+  <ion-content class="card-background-page">
+
+    <ion-card fullscreen="true">
+      <img class="image-back" src="assets/imgs/menu_back.jpg">
+      <img class="circle-pic" src="https://scontent-eze1-1.xx.fbcdn.net/v/t1.0-1/p160x160/23243998_1667968626581712_8274985121083694480_n.jpg?oh=f2cd496c736252d9b533e69d806a3309&oe=5AF770D2">
+
+      <div class="card-subtitle">marcosjdip@gmail.com</div>
+    </ion-card>
+
+    <br>
+    <ion-list no-lines>
+      <button ion-item class="item-font" menuClose (click)="openPage(p)">
+        <img class="circle-icon" src="assets/imgs/gray-circle.png">&nbsp;&nbsp;
+         Preguntas frecuentes
+      </button>
+      <button class="item-font" ion-item menuClose (click)="openPage(p)">
+        <img class="circle-icon" src="assets/imgs/gray-circle.png">&nbsp;&nbsp;
+        Legales
+      </button>
+      <button class="item-font" ion-item menuClose  (click)="openPage(p)">
+        <img class="circle-icon" src="assets/imgs/gray-circle.png"/>&nbsp;&nbsp;
+        Más aplicaciones
       </button>
     </ion-list>
   </ion-content>
+  <ion-footer no-shadow class="card-background-page">
+    <ion-list no-lines >
+      <button class="item-font" ion-item  detail-none menuClose (click)="openPage(p)">
+        <img class="circle-icon" src="assets/imgs/gray-circle.png">&nbsp;&nbsp;
+        <label class="item-fontred">Cerrar sesión</label>
+      </button>
+    </ion-list>
+  </ion-footer>
 
 </ion-menu>
 
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<!-- main navigation -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
