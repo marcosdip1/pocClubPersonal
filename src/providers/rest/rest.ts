@@ -18,7 +18,7 @@ export class RestProvider {
   private apiUrl = 'https://restcountries.eu/rest/v2/all';
   private clubCatalogTest = 'http://clubtest.personal.com.ar:8090/club/services/catalog/items?$catalogItemType=2&$heading=3&page=0&isForm=true';
   private catalogLocal = 'http://10.15.71.55:8080/app-beneficios/services/catalogo/filtrado?idNivel=&idCategoria=';
-  private catalogProd = 'https://200.9.227.28/app-beneficios/services/catalogo/filtrado?idNivel=&idCategoria=1';
+  private catalogProd = 'https://neobeneficios.neoris.net/app-beneficios/services/catalogo/filtrado?idNivel=&idCategoria=';
 
   private homeCards = [
     {
