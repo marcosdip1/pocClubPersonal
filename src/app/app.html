@@ -2,11 +2,18 @@
 
   <ion-content class="card-background-page">
 
-    <ion-card fullscreen="true">
+    <ion-card *ngIf="globals.levelId === '1'" fullscreen="true">
       <img class="image-back" src="assets/imgs/menu_back.jpg">
-      <img class="circle-pic" src="https://scontent-eze1-1.xx.fbcdn.net/v/t1.0-1/p160x160/23243998_1667968626581712_8274985121083694480_n.jpg?oh=f2cd496c736252d9b533e69d806a3309&oe=5AF770D2">
+      <img class="circle-pic" src="https://vignette.wikia.nocookie.net/bttf/images/0/0d/DocHD.jpg/revision/latest?cb=20101204171933">
 
-      <div class="card-subtitle">marcosjdip@gmail.com</div>
+      <div class="card-subtitle">doc.brown@gmail.com</div>
+    </ion-card>
+
+    <ion-card *ngIf="globals.levelId === '2'" fullscreen="true">
+      <img class="image-back" src="assets/imgs/menu_back.jpg">
+      <img class="circle-pic" src="https://s3-sa-east-1.amazonaws.com/lalegal/app/public/system/photos/7919/original/MartyMcfly.jpg?1449845387">
+
+      <div class="card-subtitle">marty.mcfly@gmail.com</div>
     </ion-card>
 
     <br>

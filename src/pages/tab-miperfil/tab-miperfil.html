@@ -10,10 +10,17 @@
 <ion-content>
      <ion-row >
       <ion-col>
-        <ion-item no-lines>
-          <img class="circle-pic" src="https://scontent-eze1-1.xx.fbcdn.net/v/t1.0-1/p160x160/23243998_1667968626581712_8274985121083694480_n.jpg?oh=f2cd496c736252d9b533e69d806a3309&oe=5AF770D2">
+        <ion-item *ngIf="levelId === '1'" no-lines>
+          <img class="circle-pic" src="https://vignette.wikia.nocookie.net/bttf/images/0/0d/DocHD.jpg/revision/latest?cb=20101204171933">
           <div class="header-title" text-left>
-            <p>Marcos Dip</p>
+            <p>Doc Brown</p>
+            <hr>
+          </div>
+        </ion-item>
+        <ion-item *ngIf="levelId === '2'" no-lines>
+          <img class="circle-pic" src="https://s3-sa-east-1.amazonaws.com/lalegal/app/public/system/photos/7919/original/MartyMcfly.jpg?1449845387">
+          <div class="header-title" text-left>
+            <p>Marty McFly</p>
             <hr>
           </div>
         </ion-item>

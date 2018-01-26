@@ -18,8 +18,10 @@ import { App  } from 'ionic-angular';
 })
 export class TabMiperfilPage {
   private level: string;
+  private levelId: string;
   constructor(public navCtrl: NavController, public navParams: NavParams,private globals: GlobalProvider,public app: App ) {
     this.level = globals.level;
+    this.levelId = globals.levelId;
   }
 
   ionViewDidLoad() {
