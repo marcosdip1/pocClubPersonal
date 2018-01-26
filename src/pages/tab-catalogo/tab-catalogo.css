@@ -3,17 +3,17 @@ Error: File to import not found or unreadable: ionic.globals.
         on line 15 of ../../theme/variables.scss
         from line 1 of tab-catalogo.scss
 
-10:   .card-md,
-11:   .card-ios {
-12:     margin: 2px;
-13:     width: 100%;
-14:     height: 100%;
-15:     display: flex;
-16:     flex-direction: column;
-17:     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
-18:   }
-19:   .card-footer {
-20:     margin-top: auto;
+10:   }
+11:   .card-md,
+12:   .card-ios {
+13:     margin: 2px;
+14:     width: 100%;
+15:     height: 100%;
+16:     display: flex;
+17:     flex-direction: column;
+18:     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+19:   }
+20:   .card-footer {
 
 Backtrace:
 ../../theme/variables.scss:15
@@ -73,4 +73,4 @@ C:/java/Ruby193/bin/scss:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ionic.globals.\A         on line 15 of ../../theme/variables.scss\A         from line 1 of tab-catalogo.scss\A \A 10:   .card-md,\A 11:   .card-ios {\A 12:     margin: 2px;\A 13:     width: 100%;\A 14:     height: 100%;\A 15:     display: flex;\A 16:     flex-direction: column;\A 17:     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);\A 18:   }\A 19:   .card-footer {\A 20:     margin-top: auto;"; }
+  content: "Error: File to import not found or unreadable: ionic.globals.\A         on line 15 of ../../theme/variables.scss\A         from line 1 of tab-catalogo.scss\A \A 10:   }\A 11:   .card-md,\A 12:   .card-ios {\A 13:     margin: 2px;\A 14:     width: 100%;\A 15:     height: 100%;\A 16:     display: flex;\A 17:     flex-direction: column;\A 18:     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);\A 19:   }\A 20:   .card-footer {"; }

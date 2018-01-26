@@ -40,6 +40,7 @@ export class GeolocationPage {
   autocompleteItems: any;
   loading: any;
   markers: any;
+  stores:string[];
 
   constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider, private googleMaps:GoogleMaps, private geolocationNative:Geolocation, public zone: NgZone,public loadingCtrl: LoadingController) {
     this.locationBenefit = new LatLng(-35.2012189, -61.728174499999994);
@@ -51,8 +52,15 @@ export class GeolocationPage {
   }
 
   ionViewDidLoad() {
-    this.getCatalog();
-    this.getUserPosition();
+    this.getGeoCatalog();
+  }
+
+  getGeoCatalog() {
+    //noinspection TypeScriptUnresolvedVariable
+    this.rest.getGeoCatalog()
+      .subscribe(
+        benefits => {this.benefits = benefits, this.getUserPosition()},
+        error => this.errorMessage = <any>error);
   }
 
   updateSearchResults(){
@@ -99,14 +107,6 @@ export class GeolocationPage {
     this.markers = [];
   }
 
-  getCatalog() {
-    this.rest.getCatalogLocal()
-      .subscribe(
-        benefits => this.benefits = benefits,
-        error => this.errorMessage = <any>error);
-    console.log(this.errorMessage);
-  }
-
   addMap(lat, long) {
 
     let latLng = new google.maps.LatLng(lat, long);
@@ -121,11 +121,24 @@ export class GeolocationPage {
     mapEle.classList.add('show-map');
 
     this.map = new google.maps.Map(mapEle, mapOptions);
-    this.addMUserLocation();
+    this.addUserLocation();
+
+    console.log("ASjAJD");
+    for (let i of this.benefits) {
+      console.log(i);
+    }
+    // this.benefits.forEach(obj => {
+    //     //noinspection TypeScriptUnresolvedVariable
+    //   this.stores = obj.sucursales;
+    //     console.log("STORES");
+    //     console.log(obj);
+    //     console.log(this.stores);
+    //
+    // });
     this.addMarker();
   }
 
-  addMUserLocation() {
+  addUserLocation() {
     let marker = new google.maps.Marker({
       map: this.map,
       animation: google.maps.Animation.DROP,

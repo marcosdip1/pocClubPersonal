@@ -1,4 +1,5 @@
 @import '../../theme/variables.scss';
+
 page-tab-catalogo {
   .card-content-md,
   .card-content-ios {
@@ -19,11 +20,26 @@ page-tab-catalogo {
   .card-footer {
     margin-top: auto;
   }
-  .card-category {
-    color: map-get($colors, dark);
-    font-size: 1.2rem !important;
+  .card-category-1,
+  .card-category-2,
+  .card-category-3 {
+    font-size: 1.3rem !important;
     font-weight: bold;
+    text-align: center;
   }
+
+  .card-category-1 {
+    color: map-get($colors, dark);
+  }
+
+  .card-category-2 {
+    color: map-get($colors, primary);
+  }
+
+  .card-category-3 {
+    color: map-get($colors, danger);
+  }
+
   .card-description {
     color: map-get($colors, light);
     font-size: 1.2rem !important;
@@ -49,12 +65,12 @@ page-tab-catalogo {
   }
   .button-inner {
     padding-left: 10px;
-    justify-content:flex-start;
+    justify-content: flex-start;
   }
-  .label{
+  .label {
     margin-right: 0px !important;
   }
-  .item-inner{
+  .item-inner {
     margin-left: 0px !important;
     padding-right: 1px !important;
   }

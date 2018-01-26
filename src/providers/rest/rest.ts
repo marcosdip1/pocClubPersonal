@@ -19,7 +19,8 @@ export class RestProvider {
   private clubCatalogTest = 'http://clubtest.personal.com.ar:8090/club/services/catalog/items?$catalogItemType=2&$heading=3&page=0&isForm=true';
   private catalogLocal = 'http://10.15.71.55:8080/app-beneficios/services/catalogo/filtrado?idNivel=&idCategoria=';
   private catalogProd = 'https://neobeneficios.neoris.net/app-beneficios/services/catalogo/filtrado?idNivel=&idCategoria=';
-
+  private catalogDummy = 'http://www.json-generator.com/api/json/get/cfubdcxMMO?indent=2';
+  private geoCatalogLocal = 'http://192.168.0.185:8080/app-beneficios/services/descuento/descuentosGDTO?longuitud=-34.2015628&latitud=-60.7388666&idNivel=&idCategoria=';
   private homeCards = [
     {
       id: 1,
@@ -50,32 +51,43 @@ export class RestProvider {
   constructor(public http:HttpClient) {
   }
 
+  getGeoCatalog():Observable<string[]> {
+    //noinspection TypeScriptValidateTypes
+    return this.http.get(this.geoCatalogLocal)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
   getCountries():Observable<string[]> {
+    //noinspection TypeScriptValidateTypes
     return this.http.get(this.apiUrl)
       .map(this.extractData)
       .catch(this.handleError);
   }
 
+  getCatalogDummy():Observable<string[]> {
+    //noinspection TypeScriptValidateTypes
+    return this.http.get(this.catalogDummy)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
   getCatalogLocal():Observable<string[]> {
-    // let headers = new Headers();
-    // headers.append('Content-Type','application/json');
-    // headers.append('Accept', 'application/json');
-    // headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, DELETE, PUT');
-    // headers.append('Access-Control-Allow-Origin', '*');
-    // headers.append('Access-Control-Allow-Headers', "X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding");
-    // let options = new RequestOptions({ headers: headers });
+    //noinspection TypeScriptValidateTypes
     return this.http.get(this.catalogLocal)
       .map(this.extractData)
       .catch(this.handleError);
   }
 
   getCatalogTest():Observable<string[]> {
+    //noinspection TypeScriptValidateTypes
     return this.http.get(this.clubCatalogTest)
       .map(this.extractData)
       .catch(this.handleError);
   }
 
   getCatalogProd():Observable<string[]> {
+    //noinspection TypeScriptValidateTypes
     return this.http.get(this.catalogProd)
       .map(this.extractData)
       .catch(this.handleError);

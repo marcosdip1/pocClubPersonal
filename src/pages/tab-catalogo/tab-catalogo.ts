@@ -3,6 +3,7 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {RestProvider} from '../../providers/rest/rest';
 import {StoresPage} from "../stores/stores";
 import {GeolocationPage} from "../geolocation/geolocation";
+import {HttpClient} from "@angular/common/http";
 
 /**
  * Generated class for the TabCatalogoPage page.
@@ -11,45 +12,50 @@ import {GeolocationPage} from "../geolocation/geolocation";
  * Ionic pages and navigation.
  */
 
-
 @Component({
   selector: 'page-tab-catalogo',
   templateUrl: 'tab-catalogo.html',
 })
 export class TabCatalogoPage {
 
-  countries:string[];
   errorMessage:string;
   benefits:string[];
+  headings:string[];
 
-
-  constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider) {
+  constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider, public http:HttpClient) {
   }
 
   ionViewDidLoad() {
-    this.getCatalogTest();
+    this.getCatalog();
+    // this.getHeadings();
   }
 
-  getCountries() {
-    this.rest.getCountries()
+  getHeadings() {
+    //noinspection TypeScriptUnresolvedVariable
+    this.rest.getCatalogDummy()
       .subscribe(
-        countries => this.countries = countries,
+        benefits => this.headings = benefits.categorias,
         error => this.errorMessage = <any>error);
+    console.log(this.headings);
   }
 
-  getCatalogTest() {
-    this.rest.getCatalogTest()
+  getCatalog() {
+    //noinspection TypeScriptUnresolvedVariable
+    this.rest.getCatalogDummy()
       .subscribe(
-        benefits => this.benefits = benefits,
+        benefits => this.benefits = benefits.descuentos,
         error => this.errorMessage = <any>error);
+        console.log(this.benefits);
   }
 
-  openGeolocation(){
+  openGeolocation() {
     this.navCtrl.push(GeolocationPage);
   }
 
-  openStores(){
+  openStores() {
     this.navCtrl.push(StoresPage);
   }
 
+
 }
+
