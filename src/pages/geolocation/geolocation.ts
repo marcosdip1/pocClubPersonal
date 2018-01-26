@@ -12,6 +12,7 @@ import {
   LatLng
 } from '@ionic-native/google-maps';
 import {Geolocation, GeolocationOptions, Geoposition, PositionError} from '@ionic-native/geolocation';
+import {BenefitDetailPage} from "../benefitdetail/benefitdetail";
 
 declare var google;
 /**
@@ -44,7 +45,6 @@ export class GeolocationPage {
   locationStore:LatLng;
 
   constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider, private googleMaps:GoogleMaps, private geolocationNative:Geolocation, public zone: NgZone,public loadingCtrl: LoadingController) {
-    this.locationBenefit = new LatLng(-35.2012189, -61.728174499999994);
     this.GoogleAutocomplete = new google.maps.places.AutocompleteService();
     this.autocomplete = { input: '' };
     this.autocompleteItems = [];
@@ -127,7 +127,8 @@ export class GeolocationPage {
       this.stores = b.sucursales;
       for (let s of this.stores) {
         this.locationStore = new LatLng(Number(s.latitud),Number(s.longitud));
-        this.addMarker(this.locationStore);
+        this.addMarker(this.locationStore, s.calle, s.numero, b.nombre, b.proveedor.horarioAtencion);
+        
       }
     }
 
@@ -148,19 +149,19 @@ export class GeolocationPage {
     });
   }
 
-  addMarker(latlong) {
+  addMarker(latlong, calle, numero, nombre, horario) {
     var position = new google.maps.LatLng(latlong.lat, latlong.lng);
     var dogwalkMarker = new google.maps.Marker({
       position: position,
-      title: "benefit title",
+      title: nombre,
       icon: 'assets/imgs/pin_icon_new.png'
     });
     dogwalkMarker.setMap(this.map);
-    this.addInfoWindowToMarker(dogwalkMarker);
+    this.addInfoWindowToMarker(dogwalkMarker, calle, numero, horario);
   }
 
-  addInfoWindowToMarker(marker) {
-    var infoWindowContent = '<div id="content"><p id="firstHeading" class="firstHeading">' + marker.title + '</p><p>Dirección</p><p>Horario</p></div>';
+  addInfoWindowToMarker(marker, calle, numero, horario) {
+    var infoWindowContent = '<div id="content"><p id="firstHeading" class="firstHeading" no-margin>' + marker.title + '</p><p no-margin>'+calle+' '+numero+'</p><p no-margin>'+horario+'</p></div>';
     var infoWindow = new google.maps.InfoWindow({
       content: infoWindowContent
     });
@@ -185,6 +186,12 @@ export class GeolocationPage {
       console.log("error : " + err.message);
 
     })
+  }
+
+  openDetail(idBenefit){
+    this.navCtrl.push(BenefitDetailPage,{
+      idBenefitParam:idBenefit
+    });
   }
 
 }

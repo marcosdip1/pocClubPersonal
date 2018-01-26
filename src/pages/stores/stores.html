@@ -1,20 +1,20 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Sucursales</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Sucursales</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <div id="map"></div>
-  <ion-list padding>
-    <ion-item no-padding>
-      <ion-icon name="pin" item-start style="color: #00b5c7"></ion-icon>
-      <h2>Dirección</h2>
-      <h3>Ciudad</h3>
-      <p>Provincia</p>
-    </ion-item>
-  </ion-list>
+    <div id="map"></div>
+    <ion-list padding>
+        <ion-item no-padding *ngFor="let s of stores">
+            <ion-icon name="pin" item-start style="color: #00b5c7"></ion-icon>
+            <h2 [innerHTML]="s.calle+' '+s.numero"></h2>
+            <h3 [innerHTML]="s.descripcionLocalidad"></h3>
+            <p [innerHTML]="s.descripcionProvincia"></p>
+        </ion-item>
+    </ion-list>
 </ion-content>

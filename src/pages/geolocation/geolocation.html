@@ -1,61 +1,59 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Cercanos</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Cercanos</ion-title>
+    </ion-navbar>
 </ion-header>
 
 
 <ion-content>
-  <h5 class="page-title">¿Qué querés hacer?</h5>
-  <p text-left padding no-margin>Filtrá los descuentos que tenés cerca por una categoría:</p>
-  <ion-list no-margin>
-    <ion-item>
-      <ion-label>Categoría</ion-label>
-      <ion-select [(ngModel)]="selectedLeave">
-        <ion-option value="gastronomia">Gastronomía</ion-option>
-        <ion-option value="compras">Compras</ion-option>
-        <ion-option value="cine">Cine</ion-option>
-        <ion-option value="electronica">Electrónica</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-  <p text-left padding no-margin>O buscá en el mapa:</p>
-  <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()"
-                 placeholder="Buscar"></ion-searchbar>
-  <ion-list [hidden]="autocompleteItems.length == 0">
-    <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
-      {{ item.description }}
-    </ion-item>
-  </ion-list>
-  <div id="map"></div>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 *ngFor="let b of benefits">
-        <ion-card>
-          <img class="card-image" [src]="b.imagen"/>
-          <ion-card-content>
-            <h3 class="card-title" [innerHTML]="b.nombre">
-            </h3>
-            <div *ngFor="let s of b.sucursales; index as i; first as isFirst">
-              <p class="card-description" *ngIf="isFirst"
-                 [innerHTML]="s.calle+'-'+s.numero+'-'+s.descripcionLocalidad+'-'+s.descripcionProvincia">
-              </p>
-              <p class="card-description" *ngIf="isFirst" [innerHTML]="s.telefono">
-              </p>
-            </div>
-            <p class="card-description" [innerHTML]="b.proveedor.horarioAtencion">
-            </p>
-          </ion-card-content>
-          <ion-row no-padding class="card-footer">
-            <ion-col>
-              <div *ngFor="let s of b.sucursales; index as i; first as isFirst">
-                <p class="card-distance" *ngIf="isFirst" [innerHTML]="s.distancia+'kms.'"></p>
-              </div>
+    <h5 class="page-title">¿Qué querés hacer?</h5>
+    <p text-left padding no-margin>Filtrá los descuentos que tenés cerca por un rubro:</p>
+    <ion-list no-margin>
+        <ion-item>
+            <ion-label>Categoría</ion-label>
+            <ion-select [(ngModel)]="selectedLeave">
+                <ion-option value="gastronomia">Gastronomía</ion-option>
+                <ion-option value="compras">Compras</ion-option>
+                <ion-option value="cine">Cine</ion-option>
+                <ion-option value="electronica">Electrónica</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <p text-left padding no-margin>O buscá en el mapa:</p>
+    <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Buscar"></ion-searchbar>
+    <ion-list [hidden]="autocompleteItems.length == 0">
+        <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+            {{ item.description }}
+        </ion-item>
+    </ion-list>
+    <div id="map"></div>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 *ngFor="let b of benefits">
+                <ion-card (click)="openDetail(b.id)">
+                    <img class="card-image" [src]="b.imagen" />
+                    <ion-card-content>
+                        <h3 class="card-title" [innerHTML]="b.nombre">
+                        </h3>
+                        <div *ngFor="let s of b.sucursales; index as i; first as isFirst">
+                            <p class="card-description" *ngIf="isFirst" [innerHTML]="s.calle+'-'+s.numero+'-'+s.descripcionLocalidad+'-'+s.descripcionProvincia">
+                            </p>
+                            <p class="card-description" *ngIf="isFirst" [innerHTML]="s.telefono">
+                            </p>
+                        </div>
+                        <p class="card-description" [innerHTML]="b.proveedor.horarioAtencion">
+                        </p>
+                    </ion-card-content>
+                    <ion-row no-padding class="card-footer">
+                        <ion-col>
+                            <div *ngFor="let s of b.sucursales; index as i; first as isFirst">
+                                <p class="card-distance" *ngIf="isFirst" [innerHTML]="s.distancia+'kms.'"></p>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
             </ion-col>
-          </ion-row>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+        </ion-row>
+    </ion-grid>
 </ion-content>

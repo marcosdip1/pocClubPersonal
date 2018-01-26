@@ -6,9 +6,9 @@
 <ion-content no-padding>
     <img [src]="image" class="header-img" />
     <div padding>
-        <b><span [innerHTML]="name" class="title"></span></b>
         <ion-row>
-            <ion-col col-12 col-sm>
+            <b><span [innerHTML]="name" class="title" style="padding-left: 10px;"></span></b>
+            <ion-col col-12 col-sm style="padding-left: 10px;">
                 <span [innerHTML]="shortDescription"></span>
             </ion-col>
             <ion-col col-12 col-sm>
@@ -30,20 +30,25 @@
                     </ion-card-content>
                 </ion-card>
             </ion-col>
+
             <!-- Details -->
             <ion-col col-12 col-sm class="card-column">
                 <ion-card class="card">
                     <ion-card-content class="card-content">
                         <div class="card-labels"><b><span>Descripción del descuento</span></b></div>
                         <div class="card-details" [innerHTML]="description"></div>
+                    </ion-card-content>
+                </ion-card>
+                <ion-card class="card" (click)="openBranchOffices(branchOffices)">
+                    <ion-card-content class="card-content">
                         <div class="card-labels"><b><span>Proveedor: </span></b><span class="card-details" [innerHTML]="provider"></span></div>
-
-
-                        <button ion-item class="card-labels" (click)="openBranchOffices(branchOffices)">
-                <!--<img class="circle-icon" src="assets/imgs/gray-circle.png">&nbsp;&nbsp;-->
-                <b><label>Sucursales</label></b>
-              </button>
-
+                        <div class="card-labels"><b><span>Sucursales</span></b>
+                            <ion-icon name="arrow-forward" style="float: right;"></ion-icon>
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+                <ion-card class="card">
+                    <ion-card-content class="card-content">
                         <div class="card-labels"><b><span>Legales</span></b></div>
                         <div class="card-details" [innerHTML]="legal"></div>
                     </ion-card-content>

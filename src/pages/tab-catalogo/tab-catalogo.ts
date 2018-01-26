@@ -54,7 +54,7 @@ export class TabCatalogoPage {
     this.navCtrl.push(StoresPage);
   }
 
-  openDetail(idBenefit){
+  openDetail(idBenefit, nameBenefit){
     this.navCtrl.push(BenefitDetailPage,{
       idBenefitParam:idBenefit
     });
