@@ -23,9 +23,11 @@ export class TabCatalogoPage {
   errorMessage:string;
   benefits:string[];
   private level: string;
+  private levelId: string;
 
   constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider, public http:HttpClient,private globals: GlobalProvider) {
     this.level = globals.level;
+    this.levelId = globals.levelId;
   }
 
   ionViewDidLoad() {
@@ -37,7 +39,7 @@ export class TabCatalogoPage {
   }*/
 
   getCatalog() {
-    this.rest.getCatalogProd()
+    this.rest.getCatalogProd(this.levelId)
       .subscribe(
         (benefits:any) => this.benefits = benefits.descuentos,
         error => this.errorMessage = <any>error);
