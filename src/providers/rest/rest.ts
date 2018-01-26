@@ -23,7 +23,7 @@ export class RestProvider {
   private geoCatalogLocal = 'http://10.15.71.79:8080/app-beneficios/services/descuento/descuentosGDTO?longuitud=-34.2015628&latitud=-60.7388666&idNivel=&idCategoria=';
   private geoCatalogProd = 'https://neobeneficios.neoris.net/app-beneficios/services/descuento/descuentosGDTO?longuitud=-34.2015628&latitud=-60.7388666&idNivel=&idCategoria=';
   private clubBenefitDetail = 'https://neobeneficios.neoris.net/app-beneficios/services/descuento/';
-  
+
   private homeCards = [
     {
       id: 1,
@@ -56,7 +56,7 @@ export class RestProvider {
 
   getGeoCatalog():Observable<string[]> {
     //noinspection TypeScriptValidateTypes
-    return this.http.get(this.geoCatalogLocal)
+    return this.http.get(this.geoCatalogProd)
       .map(this.extractData)
       .catch(this.handleError);
   }
