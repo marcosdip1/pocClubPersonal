@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { GlobalProvider } from "../../providers/global/global";
 
 @Component({
@@ -8,8 +8,10 @@ import { GlobalProvider } from "../../providers/global/global";
 })
 export class LoginPage {
 
+  countries: string[];
+  errorMessage: string;
   constructor(public navCtrl: NavController, public navParams: NavParams,private globals: GlobalProvider) {
-
+    //this.getCountries();
   }
 
   doFacebook() {

@@ -4,6 +4,7 @@ import {RestProvider} from '../../providers/rest/rest';
 import {StoresPage} from "../stores/stores";
 import {GeolocationPage} from "../geolocation/geolocation";
 import {HttpClient} from "@angular/common/http";
+import { GlobalProvider } from "../../providers/global/global";
 
 /**
  * Generated class for the TabCatalogoPage page.
@@ -20,17 +21,19 @@ export class TabCatalogoPage {
 
   errorMessage:string;
   benefits:string[];
+  private level: string;
 
-  constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider, public http:HttpClient) {
+  constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider, public http:HttpClient,private globals: GlobalProvider) {
+    this.level = globals.level;
   }
-  //
-  // ionViewDidLoad() {
-  //   this.getCatalog();
-  // }
 
-  ionViewWillEnter() {
+  ionViewDidLoad() {
+     this.getCatalog();
+  }
+
+/*  ionViewWillEnter() {
     this.getCatalog();
-  }
+  }*/
 
   getCatalog() {
     this.rest.getCatalogProd()

@@ -35,7 +35,7 @@ import { GlobalProvider } from '../providers/global/global';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{tabsHideOnSubPages: true}),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
