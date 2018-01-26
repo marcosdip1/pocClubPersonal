@@ -20,30 +20,22 @@ export class TabCatalogoPage {
 
   errorMessage:string;
   benefits:string[];
-  headings:string[];
 
   constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider, public http:HttpClient) {
   }
+  //
+  // ionViewDidLoad() {
+  //   this.getCatalog();
+  // }
 
-  ionViewDidLoad() {
+  ionViewWillEnter() {
     this.getCatalog();
-    // this.getHeadings();
-  }
-
-  getHeadings() {
-    //noinspection TypeScriptUnresolvedVariable
-    this.rest.getCatalogDummy()
-      .subscribe(
-        benefits => this.headings = benefits.categorias,
-        error => this.errorMessage = <any>error);
-    console.log(this.headings);
   }
 
   getCatalog() {
-    //noinspection TypeScriptUnresolvedVariable
-    this.rest.getCatalogDummy()
+    this.rest.getCatalogProd()
       .subscribe(
-        benefits => this.benefits = benefits.descuentos,
+        (benefits:any) => this.benefits = benefits.descuentos,
         error => this.errorMessage = <any>error);
         console.log(this.benefits);
   }
@@ -58,4 +50,3 @@ export class TabCatalogoPage {
 
 
 }
-

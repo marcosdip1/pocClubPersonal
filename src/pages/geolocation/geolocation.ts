@@ -28,7 +28,7 @@ declare var google;
 export class GeolocationPage {
 
   errorMessage:string;
-  benefits:string[];
+  benefits:any;
   map:any;
   options:GeolocationOptions;
   currentPos:Geoposition;
@@ -40,7 +40,8 @@ export class GeolocationPage {
   autocompleteItems: any;
   loading: any;
   markers: any;
-  stores:string[];
+  stores:any;
+  locationStore:LatLng;
 
   constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider, private googleMaps:GoogleMaps, private geolocationNative:Geolocation, public zone: NgZone,public loadingCtrl: LoadingController) {
     this.locationBenefit = new LatLng(-35.2012189, -61.728174499999994);
@@ -56,7 +57,6 @@ export class GeolocationPage {
   }
 
   getGeoCatalog() {
-    //noinspection TypeScriptUnresolvedVariable
     this.rest.getGeoCatalog()
       .subscribe(
         benefits => {this.benefits = benefits, this.getUserPosition()},
@@ -123,19 +123,14 @@ export class GeolocationPage {
     this.map = new google.maps.Map(mapEle, mapOptions);
     this.addUserLocation();
 
-    console.log("ASjAJD");
-    for (let i of this.benefits) {
-      console.log(i);
+    for (let b of this.benefits) {
+      this.stores = b.sucursales;
+      for (let s of this.stores) {
+        this.locationStore = new LatLng(Number(s.latitud),Number(s.longitud));
+        this.addMarker(this.locationStore);
+      }
     }
-    // this.benefits.forEach(obj => {
-    //     //noinspection TypeScriptUnresolvedVariable
-    //   this.stores = obj.sucursales;
-    //     console.log("STORES");
-    //     console.log(obj);
-    //     console.log(this.stores);
-    //
-    // });
-    this.addMarker();
+
   }
 
   addUserLocation() {
@@ -153,8 +148,8 @@ export class GeolocationPage {
     });
   }
 
-  addMarker() {
-    var position = new google.maps.LatLng(this.locationBenefit.lat, this.locationBenefit.lng);
+  addMarker(latlong) {
+    var position = new google.maps.LatLng(latlong.lat, latlong.lng);
     var dogwalkMarker = new google.maps.Marker({
       position: position,
       title: "benefit title",

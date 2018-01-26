@@ -17,10 +17,10 @@ export class RestProvider {
 
   private apiUrl = 'https://restcountries.eu/rest/v2/all';
   private clubCatalogTest = 'http://clubtest.personal.com.ar:8090/club/services/catalog/items?$catalogItemType=2&$heading=3&page=0&isForm=true';
-  private catalogLocal = 'http://10.15.71.55:8080/app-beneficios/services/catalogo/filtrado?idNivel=&idCategoria=';
+  private catalogLocal = 'http://10.15.71.79:8080/app-beneficios/services/catalogo/filtrado?idNivel=&idCategoria=';
   private catalogProd = 'https://neobeneficios.neoris.net/app-beneficios/services/catalogo/filtrado?idNivel=&idCategoria=';
   private catalogDummy = 'http://www.json-generator.com/api/json/get/cfubdcxMMO?indent=2';
-  private geoCatalogLocal = 'http://192.168.0.185:8080/app-beneficios/services/descuento/descuentosGDTO?longuitud=-34.2015628&latitud=-60.7388666&idNivel=&idCategoria=';
+  private geoCatalogLocal = 'http://10.15.71.79:8080/app-beneficios/services/descuento/descuentosGDTO?longuitud=-34.2015628&latitud=-60.7388666&idNivel=&idCategoria=';
   private homeCards = [
     {
       id: 1,
