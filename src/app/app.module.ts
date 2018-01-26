@@ -18,6 +18,7 @@ import {GoogleMaps} from '@ionic-native/google-maps';
 import {Geolocation} from '@ionic-native/geolocation';
 import {StoresPage} from "../pages/stores/stores";
 import {GeolocationPage} from "../pages/geolocation/geolocation";
+import {BenefitDetailPage} from "../pages/benefitdetail/benefitdetail";
 import { GlobalProvider } from '../providers/global/global';
 
 @NgModule({
@@ -30,7 +31,8 @@ import { GlobalProvider } from '../providers/global/global';
     TabCatalogoPage,
     TabMiperfilPage,
     StoresPage,
-    GeolocationPage
+    GeolocationPage,
+    BenefitDetailPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { GlobalProvider } from '../providers/global/global';
     TabCatalogoPage,
     TabMiperfilPage,
     StoresPage,
-    GeolocationPage
+    GeolocationPage,
+    BenefitDetailPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <img [src]="image" class="header-img"/>
+  <div padding>
+    <b><span [innerHTML]="name" class="title"></span></b>
+    <ion-row>
+      <ion-col col-12 col-sm>
+        <span [innerHTML]="shortDescription"></span>
+      </ion-col>
+      <ion-col col-12 col-sm>
+        <span class="date"> Válido desde el {{startDate | date: 'dd/MM/yyyy'}} a {{endDate | date: 'dd/MM/yyyy'}}</span>
+      </ion-col>
+      <!-- no classic -->
+      <ion-col col-12 col-sm class="card-column" *ngIf="levelBasic">
+        <ion-card class="card">
+          <ion-card-content class="card-content level-one">
+            <span class="level-font">BASIC</span>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <!-- classic -->
+      <ion-col col-12 col-sm class="card-column" *ngIf="levelFull">
+        <ion-card class="card">
+          <ion-card-content class="card-content level-two">
+            <span class="level-font">FULL</span>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <!-- Details -->
+      <ion-col col-12 col-sm class="card-column">
+        <ion-card class="card">
+          <ion-card-content class="card-content">
+            <div class="card-labels"><b><span>Descripción del descuento</span></b></div>
+            <div class="card-details" [innerHTML]="description"></div>
+            <div class="card-labels"><b><span>Proveedor: </span></b><span class="card-details" [innerHTML]="provider"></span></div>
+
+
+              <button ion-item class="card-labels" (click)="openBranchOffices(branchOffices)">
+                <!--<img class="circle-icon" src="assets/imgs/gray-circle.png">&nbsp;&nbsp;-->
+                <b><label>Sucursales</label></b>
+              </button>
+
+            <div class="card-labels"><b><span>Legales</span></b></div>
+            <div class="card-details" [innerHTML]="legal"></div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col col-12 col-sm class="card-column">
+        <button (click)="openModal()" color="danger" block="" ion-button="" class="disable-hover button button-ios button-default button-default-ios button-block button-block-ios">
+          <span class="button-inner benefit-button">OBTENER DESCUENTO</span>
+          <div class="button-effect"></div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

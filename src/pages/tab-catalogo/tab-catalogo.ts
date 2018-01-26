@@ -3,6 +3,7 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {RestProvider} from '../../providers/rest/rest';
 import {StoresPage} from "../stores/stores";
 import {GeolocationPage} from "../geolocation/geolocation";
+import {BenefitDetailPage} from "../benefitdetail/benefitdetail";
 import {HttpClient} from "@angular/common/http";
 import { GlobalProvider } from "../../providers/global/global";
 
@@ -49,6 +50,12 @@ export class TabCatalogoPage {
 
   openStores() {
     this.navCtrl.push(StoresPage);
+  }
+
+  openDetail(idBenefit){
+    this.navCtrl.push(BenefitDetailPage,{
+      idBenefitParam:idBenefit
+    });
   }
 
 

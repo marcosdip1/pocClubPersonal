@@ -1,0 +1,51 @@
+page-benefitdetail {
+  .header-img{
+    width: 100%;
+    max-height: 165px;
+    min-height: 165px;
+  }
+  .title{
+    font-size: large;
+  }
+  .date{
+    font-size: smaller;
+    display: table;
+    margin: auto;
+  }
+  .level-one{
+    background-color:#00808c;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+    padding: 7px 16px;
+  }
+  .level-two{
+    background-color:#00b5c7;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+    padding: 7px 16px;
+  }
+  .level-font{
+    font-family: light;
+    color: white;
+  }
+  .card-column{
+    padding: 0px;
+  }
+  .card-labels{
+    padding-top: 5px;
+  }
+  .card-details{
+    font-family: light;
+  }
+  .benefit-button{
+    font-family: light;
+  }
+  .ion-modal.custom-popup .ion-backdrop {
+    visibility: visible !important;
+    z-index:0;
+  }
+  .ion-modal.custom-popup .modal-wrapper{
+    top: 20%;
+    width:60%;
+    height:300px;
+    position:absolute;
+  }
+}
