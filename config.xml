@@ -90,5 +90,5 @@
     <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist.git" />
     <engine name="browser" spec="~4.1.0" />
     <engine name="android" spec="~6.1.2" />
-    <engine name="ios" spec="4.5.4" />
+    <engine name="ios" spec="~4.5.4" />
 </widget>

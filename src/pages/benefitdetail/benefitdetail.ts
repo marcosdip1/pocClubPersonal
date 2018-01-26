@@ -16,7 +16,21 @@ export class BenefitDetailPage {
 
   errorMessage:string;
   benefits:string[];
-  private image: string;
+  levelBasicDescription:any;
+  levelFullDescription:any;
+  image:any;
+  name:any;
+  shortDescription:any;
+  startDate:any;
+  endDate:any;
+  levelBasic = false;
+  levelFull = false;
+  description:any;
+  provider:any;
+  branchOffices:any;
+  legal:any;
+  idBenefitParam:any;
+  loggedId:any;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -43,10 +57,9 @@ export class BenefitDetailPage {
   }
 
   ionViewDidLoad() {
-    //noinspection TypeScriptUnresolvedVariable
     this.rest.getBenefitDetail(this.idBenefitParam)
       .subscribe(
-        data => {
+        (data:any) => {
           this.image = data.imagen;
           this.name = data.nombre;
           this.shortDescription=data.descripcionCorta;
