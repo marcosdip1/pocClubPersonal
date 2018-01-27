@@ -72,15 +72,10 @@ export class BenefitDetailPage {
         this.provider = data.proveedor.razonSocial;
         this.branchOffices = data.proveedor.id;
         this.legal = data.legales;
-        if (this.loggedId !== '') {
-          if (data.nivel.id === 1 || data.nivel.id === 3) {
-            this.levelBasic = true;
-          }
-          if (data.nivel.id === 2 || data.nivel.id === 3) {
-            this.levelFull = true;
-          }
-        } else {
+        if (data.nivel.id === 1 || data.nivel.id === 3) {
           this.levelBasic = true;
+        }
+        if (data.nivel.id === 2 || data.nivel.id === 3) {
           this.levelFull = true;
         }
       });

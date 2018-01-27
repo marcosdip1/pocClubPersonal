@@ -14,14 +14,7 @@
             <ion-col col-12 col-sm>
                 <span class="date"> Válido desde el {{startDate | date: 'dd/MM/yyyy'}} a {{endDate | date: 'dd/MM/yyyy'}}</span>
             </ion-col>
-            <!-- no classic -->
-            <ion-col col-12 col-sm class="card-column" *ngIf="levelBasic">
-                <ion-card class="card">
-                    <ion-card-content class="card-content level-one">
-                        <span class="level-font">BASIC</span>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
+
             <!-- classic -->
             <ion-col col-12 col-sm class="card-column" *ngIf="levelFull">
                 <ion-card class="card">
@@ -29,6 +22,14 @@
                         <span class="level-font">FULL</span>
                     </ion-card-content>
                 </ion-card>
+            </ion-col>
+            <!-- no classic -->
+            <ion-col col-12 col-sm class="card-column" *ngIf="levelBasic">
+              <ion-card class="card">
+                <ion-card-content class="card-content level-one">
+                  <span class="level-font">BASIC</span>
+                </ion-card-content>
+              </ion-card>
             </ion-col>
 
             <!-- Details -->
