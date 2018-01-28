@@ -37,7 +37,7 @@ export class StoresPage {
   locationStore:LatLng;
   provider:any;
   nameBenefit:any;
-  
+
   constructor(public navCtrl:NavController, public navParams:NavParams, public rest:RestProvider, private googleMaps:GoogleMaps, private geolocationNative:Geolocation) {
     this.idProviderParam = navParams.get("idBranchOfficesParam");
     this.nameBenefit = navParams.get("nameBenefitParam");
@@ -65,10 +65,10 @@ export class StoresPage {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    let mapEle:HTMLElement = document.getElementById('map');
-    mapEle.classList.add('show-map');
+    let mapEleLoc:HTMLElement = document.getElementById('mapLoc');
+    mapEleLoc.classList.add('show-map');
 
-    this.map = new google.maps.Map(mapEle, mapOptions);
+    this.map = new google.maps.Map(mapEleLoc, mapOptions);
 
     for (let s of this.stores) {
         this.locationStore = new LatLng(Number(s.latitud),Number(s.longitud));
